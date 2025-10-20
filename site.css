@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+body {
+  background-color: #0d0d0d;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #f5f5dc;
+}
+
+/* ========= TÍTULO ========= */
+#titulo {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -10px;
+  margin-top: 1px;
+}
+
+.jgm {
+  display: block;
+  font-weight: 800;
+  font-size: 3.2vw;
+  color: #f5f5dc;
+  animation: surgirJGM 8s ease forwards;
+}
+
+.barbers {
+  display: block;
+  font-weight: 600;
+  font-size: 3.4vw;
+  color: #fffaf0;
+  animation: surgirBarbers 9s ease forwards;
+  animation-delay: 30ms;
+}
+
+@keyframes surgirJGM {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes surgirBarbers {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= SEÇÃO DE MODELOS ========= */
+#modelo {
+  color: #f5f5dc;
+  font-size: 55px;
+  margin-left: 60px;
+  border-bottom: 2px solid #f5f5dc;
+  padding-bottom: 5px;
+}
+
+.cards-scroll-container {
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.cards-scroll {
+  display: flex;
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+.card {
+  width: 700px;
+  height: 650px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Scrollbar */
+.cards-scroll-container::-webkit-scrollbar {
+   height: 10px;
+}
+.cards-scroll-container::-webkit-scrollbar-thumb {
+   background: #f5f5dc;
+  border-radius: 4px;
+}
+.cards-scroll-container::-webkit-scrollbar-track {
+   background: #1a1a1a;
+}
+
+/* ========= SEÇÃO AGENDAR ========= */
+#agendar {
+  text-align: center;
+  padding: 100px 20px;
+  border-top: 2px solid #f5f5dc;
+  margin-top: 60px;
+}
+
+#agendar h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #f5f5dc;
+}
+
+.texto-agendar {
+  font-size: 20px;
+  color: #dcdcdc;
+  margin-bottom: 30px;
+}
+
+.btn-agendar {
+  display: inline-block;      /* para o <a> se comportar como botão */
+  background-color: #f5f5dc;
+  color: #0d0d0d;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;      /* remove sublinhado do link */
+  transition: all 0.3s ease;
+}
+
+.btn-agendar:hover {
+  background-color: #fffaf0;
+  transform: scale(1.05);
+}
+/*===================Seção de Assinaturas=============*/
+#assinaturas {
+  text-align: left;
+  border-top: 2px solid #f5f5dc;
+  margin-top: 60px;
+  font-size: 50px;
+}
